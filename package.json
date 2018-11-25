@@ -1,0 +1,40 @@
+{
+  "name": "drone-junit-slack",
+  "version": "0.1.0",
+  "description": "Drone CI plugin to report jUnit test results to Slack",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/minimist": "^1.2.0",
+    "@types/xml2js": "^0.4.3",
+    "husky": "^1.2.0",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
+    "ts-loader": "^5.3.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@slack/client": "^4.8.0",
+    "minimist": "^1.2.0",
+    "xml2js": "^0.4.19"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "parser": "typescript",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
